@@ -1,0 +1,48 @@
+:root {
+    /* CSS-переменные для баннеров */
+    --ozon-banner-big: url("./assets/banner-big.jpg");
+    --ozon-banner-small: url("./assets/banner-small.png");
+}
+
+.hero {
+    /* Фон hero — используйте переменную */
+    background: var(--ozon-banner-big) no-repeat;
+    background-size: cover;
+}
+
+.hero h1 {
+    /* Стили заголовка */
+    font-size: 100px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0px 2px 16px #47474775;
+}
+
+.hero-sub {
+    /* Стили подзаголовка */
+    font-size: 24px;
+    color: #fff;
+    text-shadow: 0px 2px 16px #474747b6;
+    margin-bottom: 10px;
+}
+
+.amount {
+    /* Стили суммы подарка */
+    background: #fff;
+    color: #585656;
+    font-size: 48px;
+    font-weight: 700;
+    padding: 20px 40px;
+    border-radius: 20px;
+}
+
+.banner-small-img {
+    width: 100%; /* =400px */
+    height: 220px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-image: var(--ozon-banner-small);
+    background-size: cover;
+    background-position: center;
+}
+

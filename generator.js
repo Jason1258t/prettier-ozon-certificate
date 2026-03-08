@@ -52,6 +52,12 @@ if (!outputFile) {
   outputFile = `output/certificate-${timestamp}.png`;
 }
 
+// Если путь стандартный с папкой output, создаём папку при необходимости
+const outputDir = path.dirname(outputFile);
+if (outputDir === 'output' && !fs.existsSync(path.join(__dirname, 'output'))) {
+  fs.mkdirSync(path.join(__dirname, 'output'), { recursive: true });
+}
+
 // Путь к HTML-шаблону
 const templatePath = path.join(__dirname, 'certificate.html');
 
@@ -70,9 +76,9 @@ async function generateCertificate() {
     console.log(`   Дата активации: ${activationDate}`);
 
     html = html
-      .replace(/MDP7-VK87-7X3/g, activationCode)
-      .replace(/109-984-584-788-0/g, serialNumber)
-      .replace(/05\.03\.2027/g, activationDate);
+      .replace(/XXXX-YYYY-ZZZZ/g, activationCode)
+      .replace(/000-111-222-333-4/g, serialNumber)
+      .replace(/01\.01\.2030/g, activationDate);
 
     // Сохраняем временный HTML-файл
     const tempHtmlPath = path.join(__dirname, 'temp-certificate.html');
