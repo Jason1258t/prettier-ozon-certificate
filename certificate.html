@@ -1,270 +1,69 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Подарочный сертификат</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family:  'Montserrat', Arial, Helvetica, sans-serif;
-      }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Подарочный сертификат</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./styles.css" />
+    </head>
 
-      body {
-        background: #f4f6f8;
-        color: #222;
-      }
+    <body>
+        <div class="container">
+            <section class="hero">
+                <h1>Сертификат</h1>
+                <div style="flex: 1"></div>
+                <div class="hero-sub">Вам подарок!</div>
+                <div class="amount">10 000 ₽</div>
+            </section>
 
-      .container {
-        max-width: 1100px;
-        margin: auto;
-        background: white;
-      }
+            <section class="info">
+                <div class="text">
+                    <p>
+                        Поздравляем — сертификат Ozon теперь ваш. Это значит,
+                        что вы сами сможете выбрать себе идеальный подарок из
+                        миллионов товаров на нашем сайте. Желаем вам отличных
+                        покупок вместе с Ozon!
+                    </p>
 
-      /* =======================
-   HERO БАННЕР
-   ======================= */
+                    <div class="label">
+                        Код активации
+                        <div class="value">MDP7-VK87-7X3</div>
+                    </div>
 
-      .hero {
-        background: url(./banner-big.jpg) no-repeat;
-        background-size: cover;
-        color: white;
-        padding: 60px;
-        position: relative;
-        overflow: hidden;
-      }
+                    <div class="divider"></div>
 
-      .hero h1 {
-        font-size: 90px;
-        font-weight: 700;
-        margin-bottom: 40px;
-        text-shadow: 0px 2px 16px #47474775;
-      }
+                    <div class="label">
+                        Активировать по
+                        <div class="value">05.03.2027</div>
+                    </div>
 
-      .hero-sub {
-        font-size: 24px;
-        margin-bottom: 20px;
-        text-shadow: 0px 2px 16px #474747a6;
-      }
+                    <p style="margin-top: 10px">
+                        Активируйте до 23:59<br />
+                        по МСК указанного дня.
+                    </p>
+                </div>
 
-      .amount {
-        display: inline-block;
-        background: #ffffff;
-        color: #585656;
-        font-size: 48px;
-        font-weight: 700;
-        padding: 20px 40px;
-        border-radius: 20px;
-      }
+                <div class="card">
+                    <img src="./assets/banner-small.png" alt="ozon" />
 
-      /* ===== МЕСТО ДЛЯ БАННЕРА / КАРТИНКИ ПОДАРКА ===== */
-      /* Просто замените src */
-      .gift {
-        position: absolute;
-        right: 40px;
-        bottom: 0;
-        width: 420px;
-      }
+                    <div class="serial-title">Серийный номер</div>
 
-      /* =======================
-   ИНФО БЛОК
-   ======================= */
+                    <p>109-984-584-788-0</p>
 
-      .info {
-        padding: 50px;
-        display: grid;
-        padding-right: 0;
-        grid-template-columns: 1fr 400px;
-        gap: 40px;
-        /* background: #f2f4f7; */
-      }
+                    <p style="margin-top: 10px; font-size: 14px">
+                        Если возникли проблемы — обратитесь в чат поддержки и
+                        укажите серийный номер.
+                    </p>
+                </div>
+            </section>
 
-      .text p {
-        margin-bottom: 30px;
-        line-height: 1.6;
-      }
-
-      .label {
-        font-size: 30px;
-        font-weight: 700;
-        color: #005bff;
-        margin-top: 25px;
-      }
-
-      .value {
-        display: inline-block;
-        background: #eff5ff;
-        color: #2a2a2a;
-        padding: 12px 20px;
-        border-radius: 10px;
-        font-weight: 600;
-        font-size: 24px;
-        margin-left: 15px;
-      }
-
-      .divider {
-        height: 1px;
-        background: #ccc;
-        margin: 25px 0;
-      }
-
-      /* =======================
-   КАРТОЧКА OZON
-   ======================= */
-
-      .card {
-        background: white;
-        border-radius: 14px;
-        padding: 20px;
-        text-align: left;
-      }
-
-      .card img {
-        width: 100%;
-        border-radius: 10px;
-        margin-bottom: 15px;
-      }
-
-      .serial-title {
-        color: #005bff;
-        font-weight: 700;
-        margin-top: 10px;
-        margin-bottom: 10px;
-      }
-
-      .instructions-block {
-        width: 100%;
-      }
-    </style>
-  </head>
-
-  <body>
-    <div class="container">
-      <!-- ========================================= -->
-      <!-- HERO БАННЕР -->
-      <!-- ========================================= -->
-
-      <section class="hero">
-        <h1>Сертификат</h1>
-
-        <div class="hero-sub">Вам подарок!</div>
-
-        <!-- ===== СУММА СЕРТИФИКАТА ===== -->
-        <div class="amount">10 000 ₽</div>
-
-        <!-- ===== КАРТИНКА БАННЕРА ===== -->
-        <img class="gift" src="gift.png" alt="gift" />
-      </section>
-
-      <!-- ========================================= -->
-      <!-- ИНФОРМАЦИЯ О СЕРТИФИКАТЕ -->
-      <!-- ========================================= -->
-
-      <section class="info">
-        <div class="text">
-          <p>
-            Поздравляем — сертификат Ozon теперь ваш. Это значит, что вы
-            сами сможете выбрать себе идеальный подарок из миллионов
-            товаров на нашем сайте. Желаем вам отличных покупок вместе с
-            Ozon!
-          </p>
-
-          <div class="label">
-            Код активации
-            <span class="value">
-              <!-- ===== КОД АКТИВАЦИИ ===== -->
-              MDP7-VK87-7X3
-            </span>
-          </div>
-
-          <div class="divider"></div>
-
-          <div class="label">
-            Активировать по
-            <span class="value">
-              <!-- ===== ДАТА АКТИВАЦИИ ===== -->
-              05.03.2027
-            </span>
-          </div>
-
-          <p style="margin-top: 10px">
-            Активируйте до 23:59 по МСК указанного дня.
-          </p>
+            <img src="./instructions-block.png" class="instructions-block" />
         </div>
-
-        <div class="card">
-          <!-- ===== КАРТИНКА БАННЕРА OZON ===== -->
-          <img src="./banner-small.png" alt="ozon" />
-
-          <div class="serial-title">Серийный номер</div>
-
-          <p>
-            <!-- ===== СЕРИЙНЫЙ НОМЕР ===== -->
-            109-984-584-788-0
-          </p>
-
-          <p style="margin-top: 10px; font-size: 14px">
-            Если возникли проблемы — обратитесь в чат поддержки и укажите
-            серийный номер.
-          </p>
-        </div>
-      </section>
-
-      <!-- ========================================= -->
-      <!-- ИНСТРУКЦИЯ -->
-      <!-- ========================================= -->
-      <img src="./instructions-block.png" class="instructions-block" />
-      <!-- 
-      <section class="instructions">
-        <div>
-          <div class="step">
-            <div class="step-number">1</div>
-
-            <h2>Активируйте сертификат</h2>
-
-            <ul>
-              <li>Зарегистрируйтесь или войдите на ozon.ru</li>
-              <li>В меню личного кабинета выберите «Коды и сертификаты»</li>
-              <li>Введите код активации без пробелов</li>
-              <li>Через 15–20 минут деньги появятся на балансе</li>
-            </ul>
-          </div>
-
-          <div class="step">
-            <div class="step-number">2</div>
-
-            <h2>Наслаждайтесь покупками</h2>
-
-            <ul>
-              <li>Добавьте товары в корзину</li>
-              <li>При оплате выберите оплату с баланса</li>
-            </ul>
-          </div>
-        </div>
-
-        <div>
-          <div class="video">
-            <h2 style="color: #1e5ad7; margin-bottom: 10px">
-              Видео-инструкция
-            </h2>
-
-            <p>Наведите камеру на QR-код или перейдите по ссылке</p>
-          </div>
-
-          <div class="qr">
-            ===== QR КОД ===== -->
-      <!-- <img src="./help-qr.png" alt="qr" /> -->
-      <!-- </div> -->
-      <!-- </div> -->
-      <!-- </section> -->
-    </div>
-  </body>
+    </body>
 </html>
